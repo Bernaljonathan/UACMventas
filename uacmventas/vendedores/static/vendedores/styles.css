@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+}
+
+.logo {
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    background-color: #850000;
+    color: #fff;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin: 20px auto;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 20px;
+}
+
+.title h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+article {
+    background-color: #fff;
+    color: #333;
+    width: 23%; /* Ajustar el tamaño de los artículos para tener 4 por fila */
+    text-align: center;
+    margin: 10px; /* Ajustar el margen para una apariencia simétrica */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #333;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;  
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+article img {
+    object-fit: cover;
+    width: 100%;
+    height: 180px;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.whatsapp-link {
+    color: #25D366;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.whatsapp-link:hover {
+    color: #128C7E;
+}
+
+/* Estilos para responsividad */
+@media (max-width: 1024px) {
+    main {
+        width: 90%;
+    }
+
+    article {
+        width: 30%; /* Ajustar el tamaño para 3 artículos por fila en pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        width: 95%;
+    }
+
+    article {
+        width: 45%; /* Ajustar el tamaño para 2 artículos por fila en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 576px) {
+    main {
+        width: 100%;
+    }
+
+    article {
+        width: 90%; /* Ajustar el tamaño para 1 artículo por fila en pantallas extra pequeñas */
+    }
+}

@@ -1,0 +1,33 @@
+{% extends 'vendedores/base.html' %}
+
+{% load static %}
+
+{% block title  %}<title>Lista de Vendedores</title>{% endblock  %}
+    
+   
+{% block content %}  
+
+<main>
+    
+    <section>
+        {% for vendedor in vendedores %}
+            <article>
+                <img src="{{ vendedor.imagen.url }}" alt="{{ vendedor.nombre }}"  >
+                <h2> {{ vendedor.titulo }}</h2>
+                <p>{{ vendedor.descripcion}}</p>
+                <a href="{% url 'detalle_vendedor' vendedor.id %}"><button>Ver más</button></a>
+                
+            </article>
+        {% endfor %}
+    
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-content">
+        <p>¿Quieres vender tus artículos también?</p>
+        <a href="https://wa.me/525578553089" class="whatsapp-link">¡Contáctanos por WhatsApp!</a>
+    </div>
+</footer>
+{% endblock  %}

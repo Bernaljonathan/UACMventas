@@ -1,0 +1,69 @@
+{% extends 'vendedores/base.html' %}
+
+{% load static %}
+
+
+{% block title  %}<title>{{ vendedor.nombre }}</title>{% endblock  %}
+
+{% block vendedores_styles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'vendedores/productstyles.css' %}">
+{% endblock %} 
+
+{% block content  %}
+ 
+
+<a href="{% url 'lista_vendedores' %}" class="back-button">‹</a>
+
+
+
+<h2>{{ vendedor.titulo }}</h2>
+
+<section class="products">
+
+    
+        {% for articulo in articulos %}
+            <div class="product">
+                <img src="{{ articulo.imagen.url }}" alt="{{ articulo.nombre }}"  >
+                <h3>{{articulo.nombre }}</h3>
+                <p> {{articulo.descripcion}} </p>
+                <b>${{ articulo.precio }}</b>
+            </div>
+        {% endfor %}
+
+        <div class="contacto-whatsapp">
+            <a href="https://wa.me/52{{ vendedor.numero_whatsapp }}" class="whatsapp-link">
+                <img src="{% static 'icons/whatsapp.svg' %}" alt="icon">
+            </a>
+        </div>
+
+
+        <div class="horarios-dropdown">
+            <input type="checkbox" id="horarios-toggle" class="horarios-toggle">
+
+            <label for="horarios-toggle" class="horarios-toggle-button">
+                <img src="{% static 'icons/alternate-calendar.svg' %}" alt="Icono SVG">
+            </label>
+            <div class="horarios-content">
+                <h2 class="horarios-title">Hora de disponibilidad habitual</h2>
+                
+                <table class="horarios-table">
+  
+                    {% for horario in horarios %}
+                        <tr>
+                            <td>{{ horario.dia_semana }}</td>
+                            <td>{{ horario.hora_inicio|time:"H:i" }}</td>
+                            <td>{{ horario.hora_fin|time:"H:i" }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+        
+
+       
+</section>
+
+{% endblock  %}
+
+
+

@@ -1,0 +1,202 @@
+/* styles.css */
+
+/* Estilos para la página detalle_vendedor.html */
+
+p {
+    padding: 15px;
+}
+
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 20px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 350px; /* Usamos max-width en lugar de width */
+    height: auto; /* Permitimos que la altura se ajuste automáticamente */
+    overflow: hidden;
+}
+
+.product img {
+    width: 100%; /* La imagen se ajustará al 100% del ancho del contenedor */
+    height: 280px; /* La altura se ajustará automáticamente manteniendo la proporción */
+    object-fit: cover;
+}
+
+.product h3 {
+    margin: 10px 0;
+    font-size: 20px; /* Aumentar el tamaño del título */
+    font-weight: bold;
+    color: #333;
+}
+
+.product p {
+    margin: 10px 0;
+    font-size: 16px; /* Aumentar el tamaño del texto */
+    color: #555;
+    text-align: justify;
+}
+
+.products .product {
+    width: 30%; /* Ajustar el tamaño para 2 artículos por fila en pantallas medianas */
+}
+
+.back-button {
+    position: absolute;
+    top: 180px;
+    left: 20px; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor:pointer;
+    text-decoration: none; 
+    transition: all 0.3s ease-in-out;
+
+}
+
+.back-button:hover {
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.back-button span {
+    margin-right: 5px; 
+}
+
+.contacto-whatsapp {
+    text-align: center;
+    margin-top: 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+}
+
+/* Horarios*/
+
+.horarios-section {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.horarios-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.horarios-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.horarios-table th, .horarios-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.horarios-table th {
+    background-color: #f9f9f9;
+}
+
+/* Estilos para el botón de menú desplegable */
+.horarios-dropdown {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+.horarios-toggle-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.horarios-toggle {
+    display: none;
+    border-radius: 100%;
+}
+
+.horarios-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    z-index: 1;
+    bottom: 100%; /* Mostrar hacia arriba */
+    left: 0; /* Alinear con la parte izquierda */
+}
+
+.horarios-toggle:checked + .horarios-toggle-button + .horarios-content {
+    display: block;
+}
+
+
+.horarios-toggle-button {
+    display: flex;
+    align-items: center;
+    background-color:#fff  ;
+    border-radius: 50%; 
+    padding: 10px; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: solid #333;
+}
+
+.horarios-toggle-button:hover {
+    background-color: #eae6ca; 
+}
+
+.horarios-toggle-button img {
+    width: 28px; /* Ajusta el tamaño de la imagen */
+    height: 28px;
+    object-fit: contain; /* Ajusta la imagen sin deformarla */
+   
+}
+@media (max-width: 850px) {
+    .product {
+        width: 100%; /* Ajustar el tamaño para 1 artículo por fila en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 576px) {
+    .products {
+        width: 95%;
+      }
+ 
+    .product{
+        width: 90%;
+      }
+}
+     

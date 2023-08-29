@@ -1,0 +1,38 @@
+{% load static %} 
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block title %}
+    <title>UACM ventas|</title>
+    {% endblock  %}
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'vendedores/styles.css' %}">
+    {% block vendedores_styles %} {% endblock %}
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+   
+    
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <img src="{%static 'img/logoventasuacm.png' %}" alt="logo" class="logo">
+        </nav>
+    </header>
+
+    
+
+    {% block content %}
+
+    {% endblock %}
+   
+</body>
+
+</html>
