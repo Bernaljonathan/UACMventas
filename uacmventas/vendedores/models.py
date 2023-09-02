@@ -9,6 +9,7 @@ class Vendedor(models.Model):
     imagen = models.ImageField(upload_to='vendedores/', null=False)
     prioridad = models.IntegerField(default=0)
     numero_whatsapp = models.CharField(max_length=20, null=False)
+    comentario = models.TextField(blank= True)
 
     def __str__(self):
         return self.nombre

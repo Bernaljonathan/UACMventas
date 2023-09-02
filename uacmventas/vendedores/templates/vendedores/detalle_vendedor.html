@@ -43,11 +43,10 @@
             <label for="horarios-toggle" class="horarios-toggle-button">
                 <img src="{% static 'icons/alternate-calendar.svg' %}" alt="Icono SVG">
             </label>
+
             <div class="horarios-content">
-                <h2 class="horarios-title">Hora de disponibilidad habitual</h2>
-                
+                <h2 class="horarios-title">Hora de disponibilidad habitual</h2>                
                 <table class="horarios-table">
-  
                     {% for horario in horarios %}
                         <tr>
                             <td>{{ horario.dia_semana }}</td>
@@ -59,6 +58,8 @@
             </div>
         </div>
         
+
+        <strong>{{ vendedor.comentario }}</strong>
 
        
 </section>
