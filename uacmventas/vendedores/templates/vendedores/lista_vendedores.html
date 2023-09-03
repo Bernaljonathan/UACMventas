@@ -8,7 +8,7 @@
 {% block content %}  
 
 <main>
-    
+{%if activo %}
     <section>
         {% for vendedor in vendedores %}
             <article>
@@ -21,7 +21,7 @@
         {% endfor %}
     
     </section>
-
+{% endif %}
 </main>
 
 <footer class="footer">

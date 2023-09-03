@@ -4,12 +4,15 @@ from django.db import models
 
 class Vendedor(models.Model):
     nombre = models.CharField(max_length=100)
+    email = models.EmailField(blank=False, default="sample@gmail.com")
     titulo = models.CharField(max_length=200,default='Tu producto')
     descripcion = models.TextField()
     imagen = models.ImageField(upload_to='vendedores/', null=False)
     prioridad = models.IntegerField(default=0)
     numero_whatsapp = models.CharField(max_length=20, null=False)
     comentario = models.TextField(blank= True)
+    activo = models.BooleanField(default=True)
+
 
     def __str__(self):
         return self.nombre
