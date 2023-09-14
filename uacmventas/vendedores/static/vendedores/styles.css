@@ -67,6 +67,10 @@ article {
 }
 
 footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background-color: #333;
     color: #fff;
     width: 100%;
@@ -149,6 +153,6 @@ article img {
     }
 
     article {
-        width: 90%; /* Ajustar el tamaño para 1 artículo por fila en pantallas extra pequeñas */
+        width: 100%; /* Ajustar el tamaño para 1 artículo por fila en pantallas extra pequeñas */
     }
 }

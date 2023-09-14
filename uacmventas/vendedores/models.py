@@ -35,6 +35,7 @@ class HorarioDisponible(models.Model):
     dia_semana = models.CharField(max_length=20)
     hora_inicio = models.TimeField()
     hora_fin = models.TimeField()
+    horario_activo = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.dia_semana} - {self.hora_inicio} a {self.hora_fin}"
