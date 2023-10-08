@@ -1,7 +1,5 @@
 from django.db import models
 
-
-
 class Vendedor(models.Model):
     nombre = models.CharField(max_length=100)
     email = models.EmailField(blank=False, default="sample@gmail.com")
@@ -27,8 +25,6 @@ class Articulo(models.Model):
 
     def __str__(self):
         return self.nombre
-
-
 
 class HorarioDisponible(models.Model):
     vendedor = models.ForeignKey(Vendedor, on_delete=models.CASCADE)
