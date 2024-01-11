@@ -1,5 +1,4 @@
 from django.db import models
-
 class Vendedor(models.Model):
     nombre = models.CharField(max_length=100)
     email = models.EmailField(blank=False, default="sample@gmail.com")

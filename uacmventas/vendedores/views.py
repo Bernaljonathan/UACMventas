@@ -9,7 +9,6 @@ def lista_vendedores(request):
 def detalle_vendedor(request, vendedor_id):
     vendedor = Vendedor.objects.get(pk=vendedor_id)
     horarios = HorarioDisponible.objects.filter(vendedor=vendedor, horario_activo =True)
-    articulos = vendedor.articulo_set.all()
+    articulos = vendedor.articulo_set.all() 
     return render(request, 'vendedores/detalle_vendedor.html', {'vendedor': vendedor, 'articulos': articulos, 'horarios':horarios})
-
 
