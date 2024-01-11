@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.shortcuts import render
 from .models import Vendedor, HorarioDisponible
 
 def lista_vendedores(request):
