@@ -1,9 +1,10 @@
 from django.shortcuts import render
-from .models import Vendedor, HorarioDisponible
+from .models import Vendedor, HorarioDisponible,Categoria
 
 def lista_vendedores(request):
     vendedores_activos = Vendedor.objects.filter(activo=True).order_by('-prioridad')
-    return render(request, 'vendedores/lista_vendedores.html', {'vendedores': vendedores_activos, 'activo': True})
+    categorias = Categoria.objects.all()
+    return render(request, 'vendedores/lista_vendedores.html', {'vendedores': vendedores_activos, 'activo': True, 'categorias': categorias})
 
 def detalle_vendedor(request, vendedor_id):
     vendedor = Vendedor.objects.get(pk=vendedor_id)
